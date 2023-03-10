@@ -1,0 +1,32 @@
+// File ini digunakan untuk menguji Rest API
+// tanda '###' digunakan untuk memisahkan per request
+
+
+GET http://localhost:5000/user
+
+###
+GET http://localhost:5000/user/1
+
+###
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+    "name": "Rizal Suryana",
+    "email": "rizalsuryana@rizal.com",
+    "gender": "Male"
+}
+
+
+###
+PATCH http://localhost:5000/user/1
+Content-Type: application/json
+
+{
+    "name": "Surya",
+    "email": "surya@rizal.com",
+    "gender": "Male"
+}
+
+###
+DELETE http://localhost:5000/user/3
